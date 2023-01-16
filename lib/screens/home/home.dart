@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            EmojiText(),
+            const EmojiText(),
             SearchInput(),
           ],
         ),
