@@ -1,8 +1,11 @@
 import 'package:course_app/constants/colors.dart';
 import 'package:course_app/screens/home/widget/category_title.dart';
+import 'package:course_app/screens/home/widget/course_item.dart';
 import 'package:course_app/screens/home/widget/emoji_text.dart';
 import 'package:course_app/screens/home/widget/search_input.dart';
 import 'package:flutter/material.dart';
+
+import '../../models/course.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -17,6 +20,7 @@ class HomePage extends StatelessWidget {
             const EmojiText(),
             SearchInput(),
             CategoryTitle('Top of the week', 'view all'),
+            CourseItem(Course('Luma Lanari', 'assets/icons/avatar01.png', 'Paint Technique', 'assets/images/course01.png')),
           ],
         ),
       ),
@@ -44,8 +48,8 @@ AppBar _buildAppBar(){
         Stack(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 10, right: 10),
-              padding: EdgeInsets.all(8),
+              margin: const EdgeInsets.only(top: 10, right: 10),
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 border: Border.all(color: kFontLignt.withOpacity(0.3), 
                 width: 2)
@@ -59,7 +63,7 @@ AppBar _buildAppBar(){
               child:  Container(
                 height: 8,
                 width: 8,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: kAccent,
                   shape: BoxShape.circle
                 ),
