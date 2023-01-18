@@ -1,7 +1,9 @@
 import 'package:course_app/constants/colors.dart';
+import 'package:course_app/screens/home/widget/active_course.dart';
 import 'package:course_app/screens/home/widget/category_title.dart';
 import 'package:course_app/screens/home/widget/course_item.dart';
 import 'package:course_app/screens/home/widget/emoji_text.dart';
+import 'package:course_app/screens/home/widget/feature_course.dart';
 import 'package:course_app/screens/home/widget/search_input.dart';
 import 'package:flutter/material.dart';
 
@@ -19,11 +21,57 @@ class HomePage extends StatelessWidget {
           children: [
             const EmojiText(),
             SearchInput(),
-            CategoryTitle('Top of the week', 'view all'),
-            CourseItem(Course('Luma Lanari', 'assets/icons/avatar01.png', 'Paint Technique', 'assets/images/course01.png')),
+            FeatureCourse(),
+            ActiveCourse()
           ],
         ),
       ),
+
+      bottomNavigationBar: _buildBottomNavigationBar(),
+    );
+  }
+
+  BottomNavigationBar _buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: kBackground,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      items: [
+        BottomNavigationBarItem(
+          label: 'home',
+          icon: Container(
+            padding: EdgeInsets.only(bottom: 5),
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: kAccent,
+                  width: 2
+                )
+              )
+            ),
+            child: Text(
+              'Home',
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+              ),
+            ),
+          )
+        ),
+        BottomNavigationBarItem(
+          label: 'home',
+          icon: Image.asset('assets/icons/calendar.png', width: 20,)
+        ),
+        BottomNavigationBarItem(
+          label: 'calendar',
+          icon: Image.asset('assets/icons/bookmark.png', width: 20,)
+        ),
+        BottomNavigationBarItem(
+          label: 'user',
+          icon: Image.asset('assets/icons/user.png', width: 20,)
+        )
+
+      ],
     );
   }
 }
