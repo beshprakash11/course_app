@@ -1,3 +1,4 @@
+import 'package:course_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class Module{
@@ -19,5 +20,23 @@ class Module{
     this.title, this.desc,
     this.moudleBorder, this.moduleBg, this.buttonColor, this.buttonFont, 
     this.time, this.lession
-  )
+  );
+  static List<Module> generateModules(){
+    return [
+      Module(
+        kAccent,
+        kAccent,
+        Colors.white, 
+        Icons.play_arrow_rounded, 
+        'Module 1', 
+        'How it all started.\nExplanation.', 
+        kPrimaryLight, 
+        kPrimaryLight, 
+        kprimary, 
+        kPrimaryDark, 
+        '22 min',
+        '2 lession'
+      )
+    ];
+  }
 }
