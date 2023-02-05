@@ -1,3 +1,4 @@
+import 'package:course_app/constants/colors.dart';
 import 'package:course_app/models/module.dart';
 import 'package:flutter/material.dart';
 
@@ -35,10 +36,29 @@ class CourseModule extends StatelessWidget {
         Flexible(
           flex: 5,
           child: Container(
+            padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
               border: Border.all(color: module.moudleBorder, width: 2),
               color: module.moduleBg,
               borderRadius: BorderRadius.circular(20)
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      module.title,
+                      style: TextStyle(
+                        color: kFontLignt, fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    Icon(Icons.more_horiz, color: kFontLignt,)
+                  ],
+                ),
+                
+              ],
             ),
           )
         ),
