@@ -1,4 +1,4 @@
-# course_app
+# Course App
 
 A new Flutter project.
 
