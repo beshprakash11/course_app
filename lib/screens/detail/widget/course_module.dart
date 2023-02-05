@@ -9,7 +9,20 @@ class CourseModule extends StatelessWidget {
     return Container(
       height: 180,
       child: Row(children: [
-        Flexible(flex: 1,child: Container(color: Colors.red,)),
+        Flexible(flex: 1,child: Container(
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  border: Border.all(color: module.iconBorder, width: 2),
+                  color: module.iconBG,
+                  shape: BoxShape.circle
+                ),
+                child: Icon(module.icon, size: 30, color: module.iconColor,)
+              ),
+          ],),
+          color: Colors.red,)),
         Flexible(flex: 5,child: Container(color: Colors.blue,)),
       ],),
     );
