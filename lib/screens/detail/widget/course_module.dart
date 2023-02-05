@@ -32,7 +32,16 @@ class CourseModule extends StatelessWidget {
               )
           ],),
           color: Colors.red,)),
-        Flexible(flex: 5,child: Container(color: Colors.blue,)),
+        Flexible(
+          flex: 5,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: module.moudleBorder, width: 2),
+              color: module.moduleBg,
+              borderRadius: BorderRadius.circular(20)
+            ),
+          )
+        ),
       ],),
     );
   }
