@@ -66,6 +66,11 @@ class CourseModule extends StatelessWidget {
                     fontWeight: FontWeight.bold
                   ),
                 ),
+                Row(
+                  children: [
+                    _buildButton()
+                  ],
+                ),
               ],
             ),
           )
@@ -73,4 +78,9 @@ class CourseModule extends StatelessWidget {
       ],),
     );
   }
+  _buildButton() {
+    
+  }
+
 }
+
