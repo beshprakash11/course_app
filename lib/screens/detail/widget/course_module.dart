@@ -57,7 +57,15 @@ class CourseModule extends StatelessWidget {
                     Icon(Icons.more_horiz, color: kFontLignt,)
                   ],
                 ),
-                
+                SizedBox(height: 5,),
+                Text(
+                  module.desc,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: kFont.withOpacity(0.7),
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
               ],
             ),
           )
