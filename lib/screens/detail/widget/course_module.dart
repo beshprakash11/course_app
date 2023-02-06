@@ -14,6 +14,7 @@ class CourseModule extends StatelessWidget {
           child: Column(
             children: [
               Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   border: Border.all(color: module.iconBorder, width: 2),
@@ -32,10 +33,11 @@ class CourseModule extends StatelessWidget {
                   )))
               )
           ],),
-          color: Colors.red,)),
+          color: Colors.transparent,)),
         Flexible(
           flex: 5,
           child: Container(
+            margin: EdgeInsets.all(10),
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
               border: Border.all(color: module.moudleBorder, width: 2),
@@ -66,6 +68,7 @@ class CourseModule extends StatelessWidget {
                     fontWeight: FontWeight.bold
                   ),
                 ),
+                SizedBox(height: 5,),
                 Row(
                   children: [
                     _buildButton(Icons.access_time_filled, module.time),
