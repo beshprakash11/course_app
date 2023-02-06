@@ -68,7 +68,9 @@ class CourseModule extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    _buildButton(Icons.access_time_filled, module.time)
+                    _buildButton(Icons.access_time_filled, module.time),
+                    SizedBox(width: 10,),
+                    _buildButton(Icons.bookmark, module.lession)
                   ],
                 ),
               ],
