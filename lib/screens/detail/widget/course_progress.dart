@@ -30,7 +30,8 @@ class CourseProgress extends StatelessWidget {
               )
             ],
           ),
-          CourseModule(modulesList[0])
+          ...modulesList.map((e) => CourseModule(e)).toList()
+          //CourseModule(modulesList[0])
         ],
       ),
     );

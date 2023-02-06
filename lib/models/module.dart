@@ -36,7 +36,22 @@ class Module{
         kPrimaryDark, 
         '22 min',
         '2 lession'
-      )
+      ),
+      Module(
+        kFontLignt.withOpacity(0.3),
+        Colors.white,
+        kFontLignt.withOpacity(0.7), 
+        Icons.play_arrow_rounded, 
+        'Module 2', 
+        'What we didn\'t know\nabout castastrophe', 
+        kPrimaryLight, 
+        Colors.white, 
+        Colors.green.withOpacity(0.2), 
+        Colors.grey, 
+        '22 min',
+        '2 lession'
+      ),
+
     ];
   }
 }
