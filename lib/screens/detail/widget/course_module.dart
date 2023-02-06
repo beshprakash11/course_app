@@ -86,9 +86,9 @@ class CourseModule extends StatelessWidget {
         borderRadius: BorderRadius.circular(20)
       ),
       child: Row(children: [
-        Icon(icon,),
+        Icon(icon,size: 20, color: module.buttonFont,),
         SizedBox(height: 5,),
-        Text(text)
+        Text(text, style: TextStyle(color: module.buttonFont, fontWeight: FontWeight.bold),)
       ]),
     );   
   }
