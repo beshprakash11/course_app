@@ -68,7 +68,7 @@ class CourseModule extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    _buildButton()
+                    _buildButton(Icons.access_time_filled, module.time)
                   ],
                 ),
               ],
@@ -78,8 +78,19 @@ class CourseModule extends StatelessWidget {
       ],),
     );
   }
-  _buildButton() {
-    
+  _buildButton(IconData icon, String text) {
+    return Container(
+      padding: EdgeInsets.all(5),
+      decoration: BoxDecoration(
+        color: module.buttonColor,
+        borderRadius: BorderRadius.circular(20)
+      ),
+      child: Row(children: [
+        Icon(icon,),
+        SizedBox(height: 5,),
+        Text(text)
+      ]),
+    );   
   }
 
 }
